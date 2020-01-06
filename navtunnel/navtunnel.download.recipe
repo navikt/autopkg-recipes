@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of navtunnel.</string>
+	<key>Identifier</key>
+	<string>no.nav.download.navtunnel</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://00e9e64baced1b588d668a15e5d184dfa9897690229f2d94ed-apidata.googleusercontent.com/download/storage/v1/b/munkislusa/o/IngestProduction%2Fnavtunnel-v20200102.dmg?qk=AD5uMEt_rka8KKG2BzLFN8atEwLZPncy6aDuXCs7wOZqhjFvTEUwBMmGYgyWl462xeAAzK10f5gY-3FTeGOZNEpe19aLfro9uH_yFeNOSaOp9gEmzXacJdJ1rvb8JfCfRkZSTRyH_sgUb5QvuLDmvrzybbNU5vVciAouCkLKfx_afflRw-XgVMT70MdEjsoSwUVTrRn9gnHwBlK3a_wF6GR66nw8D2pCxZAP671dZl28nzr4Rtkf2c6Ck1ePOLt3q5n_DSgIW5ss_J6eFxkTK9DXiDjisWxAnAdGMM25zdjE9nJUcZkxi2plGouCGR-mGMOIgrhZaz8qpdhv9hHrOjOrYX0FObt_sqBdbEO3SQ92UleyWQs_ewziAO4_WnEVOL0sUgfnSSEYtK5VsSP6mh7u6JhpijUv2_-UJ0HkU6-KPEjJb0BvNdBCuoWaVS6SFvnWrA1JczVVoQrO38tgy33UrF6tPrJK0gXiO-KeWGsvTh2UA_7ZL3xCFCNnNyBVavYKR4lX2afytiYH2J9i2uqogIxUp-tOUwL-Yr10-GsRzkn5jLWj05VZU0IXFxanPbR3nsvipbVMYk3yiD_SbW-t51W6kRfMtVvTMnWIFcXuNJUFfCxUbb-uP-SDP86zPWhat5DVwevI-DtDO140wdZwlvzcJjcd0d8vX2lMBUmmw0LkAe9wO6RjuZ9mETtnKQ6MleBD9WoTXxe4yBzC5VCp1Gk6r2Q1Jp2nXPmLEF04Wr_Rk0itVcaoFZCo6Af1yNDL4UhY_Nq4eawMx_gb23YH7YiOM2-Y5-36ko4C32jQWnP64KqR3vGoZlaOwf9OEw8ExMIiSyeT</string>
+		<key>NAME</key>
+		<string>navtunnel</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
