@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Figma_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Figma</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>Applications</string>
+			<key>description</key>
+			<string>Design, prototype, and gather feedback all in one place with Figma.</string>
+			<key>developer</key>
+			<string>Figma</string>
+			<key>display_name</key>
+			<string>Figma</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.dataJAR-recipes.munki.Figma</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.dataJAR-recipes.download.Figma</key>
+			<dict>
+				<key>git_hash</key>
+				<string>6e3ce6ea55174a82101f629b0e0903b0510d4486</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Figma/Figma.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>cb7347a51f804dc67037de9cb19cd4ac0a567e81fceaec356c6a63bf567d98fd</string>
+			</dict>
+			<key>com.github.dataJAR-recipes.munki.Figma</key>
+			<dict>
+				<key>git_hash</key>
+				<string>7f2d853e594ffa778011b5f71e561f0ad9cc43bd</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Figma/Figma.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>5d3c5b99df1c1d34f4e155332ae9121c2c8d8ec98bcf7b9fda4090a730808032</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

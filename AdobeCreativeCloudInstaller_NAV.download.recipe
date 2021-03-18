@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.AdobeCreativeCloudInstaller_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Creative Cloud Installer</string>
+		<key>NAMEWITHOUTSPACES</key>
+		<string>CreativeCloudInstaller</string>
+		<key>SEARCH_PATTERN</key>
+		<string>(?P&lt;url&gt;http.*?://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/.*?/osx10/ACCC.*?.dmg)</string>
+		<key>SEARCH_URL</key>
+		<string>https://helpx.adobe.com/download-install/kb/creative-cloud-desktop-app-download.html</string>
+		<key>SOFTWARETITLE</key>
+		<string>Creative Cloud Installer</string>
+		<key>VENDOR</key>
+		<string>Adobe</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.download.AdobeCreativeCloudInstaller</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.rtrouton.download.AdobeCreativeCloudInstaller</key>
+			<dict>
+				<key>git_hash</key>
+				<string>42390e21007f1bfb800ef72945a2d760a0524ce2</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/AdobeCreativeCloud/AdobeCreativeCloudInstaller.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>ab09f214299adf81bca1d3a254c8bc54447a4c39dcf6f0c2603577984ec773a7</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

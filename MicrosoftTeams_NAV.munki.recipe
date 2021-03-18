@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MicrosoftTeams_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOADURL</key>
+		<string>https://go.microsoft.com/fwlink/?linkid=%PRODUCTID%</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft</string>
+		<key>NAME</key>
+		<string>MicrosoftTeams</string>
+		<key>PRODUCTID</key>
+		<string>869428</string>
+		<key>SOFTWARETITLE</key>
+		<string>Teams</string>
+		<key>VENDOR</key>
+		<string>Microsoft</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>Productivity</string>
+			<key>description</key>
+			<string>Microsoft Teams</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>display_name</key>
+			<string>Microsoft Teams</string>
+			<key>minimum_os_version</key>
+			<string>10.10.0</string>
+			<key>name</key>
+			<string>%NAME%</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.munki.microsoftteams</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.rtrouton.download.microsoftteams</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ccb1573111f263e913f8e4b81e1c1b5f2785abb7</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/MicrosoftTeams/MicrosoftTeams.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>bab53e18aec97d83639884ada7e4cf72dc3f1a67ad75c171d0a658dbe27d9f2b</string>
+			</dict>
+			<key>com.github.rtrouton.munki.microsoftteams</key>
+			<dict>
+				<key>git_hash</key>
+				<string>51fcaa5a39e616cbc238e29ff683e9ecee3cf247</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/MicrosoftTeams/MicrosoftTeams.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>d822fcd4b45322ed0c434adea62621d4b838b518e16972745730cc2fa7b451e2</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

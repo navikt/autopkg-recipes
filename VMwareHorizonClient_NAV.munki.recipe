@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.VMwareHorizonClient_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/vmware</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>VMware Horizon Client for Mac allows you to connect to your VMware Horizon virtual desktop from your device of choice giving you on-the-go access from any location.</string>
+			<key>developer</key>
+			<string>VMware</string>
+			<key>display_name</key>
+			<string>VMware Horizon Client for Mac</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/sh
+/Applications/VMware\ Horizon\ Client.app/Contents/Library/InitUsbServices.tool
+</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.scriptingosx.munki.VMwareHorizonClient</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.scriptingosx.download.VMwareHorizonClient</key>
+			<dict>
+				<key>git_hash</key>
+				<string>30fafe0e323c9e0427ce0493ffb0dfd33f052a02</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.scriptingosx-recipes/VMwareHorizonClient/VMwareHorizonClient.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c716119dc0cbd4611dc20f2c11805ec7861a41d0433749ea4fe343582d65e5a7</string>
+			</dict>
+			<key>com.github.scriptingosx.munki.VMwareHorizonClient</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ef45bbbf0003e0a88710fb415d876b93054e7aea</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.scriptingosx-recipes/VMwareHorizonClient/VMwareHorizonClient.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>981f601162e123f0b5b71705dcbe7793ebe84e554c7a0470ae9db23a2bb811b2</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

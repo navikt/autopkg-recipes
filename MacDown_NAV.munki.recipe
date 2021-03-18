@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MacDown_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://macdown.uranusjr.com/download/latest/</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Developer Tools</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps</string>
+		<key>NAME</key>
+		<string>MacDown</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>MacDown is an open source Markdown editor for OS X.</string>
+			<key>developer</key>
+			<string>Tzu-ping Chung</string>
+			<key>display_name</key>
+			<string>MacDown Markdown editor</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jleggat.munki.macdown</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.download.macdown</key>
+			<dict>
+				<key>git_hash</key>
+				<string>0a6c4591020d21341603c8bef98a138bfb05a350</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/MacDown/MacDown.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>023d277d9d744bacd34f4a80478a0d799c0b48ab2fbcff2b15fafd7fc3753d6c</string>
+			</dict>
+			<key>com.github.jleggat.munki.macdown</key>
+			<dict>
+				<key>git_hash</key>
+				<string>d220646d2d0204e094c557bdc80a488653d92983</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/MacDown/MacDown.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>e903719eee8bae513cb023b26207d817d4c17dfb9af4eb96f60fc401bc83aa6c</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

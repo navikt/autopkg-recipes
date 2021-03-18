@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.CompanyPortal_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>DISPLAY_NAME</key>
+		<string>Company Portal</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft</string>
+		<key>NAME</key>
+		<string>CompanyPortal</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>The Company Portal provides access to corporate apps and resources from almost any network. Your company must already subscribe to Microsoft Intune, and your IT admin must set up your account before you can use this app.</string>
+			<key>display_name</key>
+			<string>%DISPLAY_NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jlehikoinen.munki.CompanyPortal</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jlehikoinen.download.CompanyPortal</key>
+			<dict>
+				<key>git_hash</key>
+				<string>fa447bb6e454f2e31e89067c256a4f1da7c55430</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jlehikoinen-recipes/CompanyPortal/CompanyPortal.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>0d399bd0c516e4a49741a6bf8106f7692f96242b524959e227f9e489dda38de9</string>
+			</dict>
+			<key>com.github.jlehikoinen.munki.CompanyPortal</key>
+			<dict>
+				<key>git_hash</key>
+				<string>75fc4cdc5a64a5239601b06dbc5362ca5d79c05e</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jlehikoinen-recipes/CompanyPortal/CompanyPortal.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>fbea3824856b12a41f0170fbebfb46ef5f24900126efd133860edbe4efa591e6</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

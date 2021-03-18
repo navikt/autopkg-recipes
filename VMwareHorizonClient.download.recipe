@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.VMwareHorizonClient</string>
+	<key>Input</key>
+	<dict/>
+	<key>ParentRecipe</key>
+	<string>com.github.scriptingosx.download.VMwareHorizonClient</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.scriptingosx.download.VMwareHorizonClient</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b0b84baa91178fee1563699ee4842d3b5e362362</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.scriptingosx-recipes/VMwareHorizonClient/VMwareHorizonClient.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>ae3c82d07c6e3a0a19a4dfd61946b53ace1c07114aeb54c1b47460d96b8268c2</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

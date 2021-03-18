@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MicrosoftOneDrive_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOADURL</key>
+		<string>https://go.microsoft.com/fwlink/?linkid=%PRODUCTID%</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft</string>
+		<key>NAME</key>
+		<string>MicrosoftOnedrive</string>
+		<key>PRODUCTID</key>
+		<string>823060</string>
+		<key>SOFTWARETITLE</key>
+		<string>OneDrive</string>
+		<key>VENDOR</key>
+		<string>Microsoft</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Productivity</string>
+			<key>description</key>
+			<string>Microsoft Onedrive</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>display_name</key>
+			<string>Microsoft Onedrive</string>
+			<key>minimum_os_version</key>
+			<string>10.12.0</string>
+			<key>name</key>
+			<string>%NAME%</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.munki.microsoftonedrive</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.rtrouton.download.microsoftonedrive</key>
+			<dict>
+				<key>git_hash</key>
+				<string>47aeca541bc55a0e0216ad524fcbda1aa80049a5</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/MicrosoftOneDrive/MicrosoftOneDrive.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>7718c1c2296c2ea2705df6e7b4378c9d7619f85244be5d55c03f095e7a509e45</string>
+			</dict>
+			<key>com.github.rtrouton.munki.microsoftonedrive</key>
+			<dict>
+				<key>git_hash</key>
+				<string>02455dd27614681f363dd5c358acb098f9175b6a</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/MicrosoftOneDrive/MicrosoftOneDrive.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>b19f0818de12d4865fa032c41d53ae82d5b7f780349831a2e89a77a9c056d89e</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

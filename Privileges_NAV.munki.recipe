@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Privileges_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>DESCRIPTION</key>
+		<string>Privileges.app for macOS is designed to allow users to work as a standard user for day-to-day use, by providing a quick and easy way to get administrator rights when needed. When you do need admin rights, you can get them by clicking on the Privileges icon in your Dock.</string>
+		<key>DISPLAYNAME</key>
+		<string>Privileges</string>
+		<key>INSTALLERSCRIPTS</key>
+		<string>Scripts</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+		<key>MUNKI_DEVELOPER</key>
+		<string>SAP</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string></string>
+		<key>NAME</key>
+		<string>Privileges</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array/>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>%DESCRIPTION%</string>
+			<key>developer</key>
+			<string>%MUNKI_DEVELOPER%</string>
+			<key>display_name</key>
+			<string>%DISPLAYNAME%</string>
+			<key>minimum_os_version</key>
+			<string>10.12</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstall_method</key>
+			<string>uninstall_script</string>
+			<key>uninstall_script</key>
+			<string>#!/bin/bash
+
+if [[ -f "/Library/LaunchDaemons/corp.sap.privileges.helper.plist" ]]; then
+    launchctl unload -w "/Library/LaunchDaemons/corp.sap.privileges.helper.plist" 2&gt;/dev/null
+    rm -rf "/Library/LaunchDaemons/corp.sap.privileges.helper.plist"
+fi
+
+rm -rf "/Applications/Privileges.app"
+rm -rf "/Library/PrivilegedHelperTools/corp.sap.privileges.helper"
+</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.munki.privileges</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.rtrouton.download.privileges</key>
+			<dict>
+				<key>git_hash</key>
+				<string>5d746a137799de02e10b2d169458ce362c9fb9e4</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/Privileges/Privileges.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1e8a22a1c2ef2723d9138722fdf40aecf0a376888f73dc3be7999bc5d8c5dd0d</string>
+			</dict>
+			<key>com.github.rtrouton.munki.privileges</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a3522c625c9a285cd72e3350ef59145d77e7d66d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/Privileges/Privileges.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>56691001ffd6ee4c52f56f0ed5131e7a5cdf473b5cb3695767b6297adf34e1ba</string>
+			</dict>
+			<key>com.github.rtrouton.pkg.privileges</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a530903fad69863f3b79a9dc5ccb23f76954b861</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/Privileges/Privileges.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>36691e7a4a77806c341052265fee835a2b3c7894429c00c47a69e3dcab32c8c4</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

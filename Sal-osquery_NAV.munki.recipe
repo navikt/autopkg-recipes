@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Sal-osquery_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>config/sal</string>
+		<key>NAME</key>
+		<string>sal-osquery</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>osquery configuration for Sal.</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>requires</key>
+			<array>
+				<string>osquery</string>
+			</array>
+			<key>unattended_install</key>
+			<true/>
+			<key>update_for</key>
+			<array>
+				<string>sal_scripts</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.grahamgilbert.Sal-osquery.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.grahamgilbert.Sal-osquery.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>371acb53f782813ac6b5ccebe8df454ec73c1e1e</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahamgilbert-recipes/Sal-osquery/Sal-osquery.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c6389cf68c40b55c46c37c6f5f11e76f0b4d2a6e2455e32f9358e5a9e496748e</string>
+			</dict>
+			<key>com.github.grahamgilbert.Sal-osquery.munki</key>
+			<dict>
+				<key>git_hash</key>
+				<string>371acb53f782813ac6b5ccebe8df454ec73c1e1e</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahamgilbert-recipes/Sal-osquery/Sal-osquery.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>65e32c093aeb583ce9e387633418acd4f99e455947c0e65b13a66770fff71150</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

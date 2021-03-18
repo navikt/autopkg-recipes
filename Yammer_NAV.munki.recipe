@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Yammer_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>DISPLAY_NAME</key>
+		<string>Microsoft Yammer</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft</string>
+		<key>NAME</key>
+		<string>MSYammer</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>Discuss ideas, share updates, and crowdsource answers from coworkers around the globe. Yammer gives your team a faster, smarter way to connect and collaborate across your company.</string>
+			<key>display_name</key>
+			<string>%DISPLAY_NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jlehikoinen.munki.MSYammer</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jlehikoinen.download.MSYammer</key>
+			<dict>
+				<key>git_hash</key>
+				<string>fa447bb6e454f2e31e89067c256a4f1da7c55430</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jlehikoinen-recipes/Yammer/Yammer.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>2611cc690b9e1a8c03957f4dbbc4966bf45b48f314ef1eb2bd3469106a434823</string>
+			</dict>
+			<key>com.github.jlehikoinen.munki.MSYammer</key>
+			<dict>
+				<key>git_hash</key>
+				<string>fa447bb6e454f2e31e89067c256a4f1da7c55430</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jlehikoinen-recipes/Yammer/Yammer.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>eda7b3d86f90196efb71d0afd7e1c3183f8dc5e2a0b6c26ccc7abade18592a52</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

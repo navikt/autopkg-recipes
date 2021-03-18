@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.TableauReader_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://www.tableau.com/downloads/reader/mac</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Tableau Reader</string>
+		<key>NAME</key>
+		<string>Tableau Reader</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Tableau Reader</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>Tableau Reader is a free desktop application you can use to interact with data visualizations built in Tableau Desktop.</string>
+			<key>developer</key>
+			<string>Tableau Software</string>
+			<key>display_name</key>
+			<string>Tableau Reader</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.TableauReader</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.TableauReader</key>
+			<dict>
+				<key>git_hash</key>
+				<string>79381286641ade4925be55fd2d8f63da652180c9</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/TableauReader/TableauReader.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>0157e3d1595b4483edad1ae26fd9ece478a1e147d72175493350d99731e88882</string>
+			</dict>
+			<key>com.github.homebysix.munki.TableauReader</key>
+			<dict>
+				<key>git_hash</key>
+				<string>c915927f9f14e02c68df404fbf84cff418b168ce</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/TableauReader/TableauReader.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>01328c8ed8784e5cd85ef19fb1598459e62e6675ae519375d13cd87062d8fd71</string>
+			</dict>
+			<key>com.github.homebysix.pkg.TableauReader</key>
+			<dict>
+				<key>git_hash</key>
+				<string>c3120e22b7380e8ed644f027e83db46eef24c78d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/TableauReader/TableauReader.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>cdadcda75a65a8a1fbbc2c9e28f0baa6321d6467be790fede7f849c2d1d56821</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

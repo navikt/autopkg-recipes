@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.LogitechOptions_NAV</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Peripherals</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/logitech</string>
+		<key>NAME</key>
+		<string>Logitech Options</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Logitech Options lets you customize gesture controls for Logitech touch products. It also adds enhanced key functions for Logitech keyboards, and notification for device-specific status features such as battery level, key backlighting level, and Caps Lock.</string>
+			<key>developer</key>
+			<string>Logitech International S.A.</string>
+			<key>display_name</key>
+			<string>Logitech Options</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.joshua-d-miller.autopkg.munki.logitechoptions</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.joshua-d-miller.autopkg.munki.logitechoptions</key>
+			<dict>
+				<key>git_hash</key>
+				<string>5c125d52ada91b90cdf9e4389f707b0a459f95e2</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/Logitech/LogitechOptions.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>9e88adba30537e38c1b8dffbdc3017ef43f25c87086ade2a8ddd8030a857d8a5</string>
+			</dict>
+			<key>com.github.joshua-d-miller.download.logitechoptions</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e26efe0b6cede06829cb06ccd0c8e84965bf66f9</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/Logitech/LogitechOptions.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>e5c3db585ccdbea3be4dcbc56835758b72099c7d7c15694ccc02c3b7d9166bb3</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
